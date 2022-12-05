@@ -1,0 +1,16 @@
+PODS:
+  - LFWidgets (0.1.0)
+
+DEPENDENCIES:
+  - LFWidgets (from `../`)
+
+EXTERNAL SOURCES:
+  LFWidgets:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LFWidgets: c6b5a17be50777ac7e27060170205a036bc1b37f
+
+PODFILE CHECKSUM: b7306af23ecadc20ad434b18177651113ff70734
+
+COCOAPODS: 1.11.3
