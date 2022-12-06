@@ -24,8 +24,8 @@
 		6AC47F4F2CA258B0CEEDF401 /* Pods_LFWidgets_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2BEDABAF8AE4D53F4BA7CB3 /* Pods_LFWidgets_Tests.framework */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		FE547FEA293EEA8E00175E72 /* LFCapsuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE547FE7293EEA8E00175E72 /* LFCapsuleViewController.m */; };
-		FE547FEB293EEA8E00175E72 /* LFWdigetEampleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE547FE8293EEA8E00175E72 /* LFWdigetEampleModel.m */; };
+		FE547FF0293EEB8600175E72 /* LFWdigetEampleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE547FEC293EEB8600175E72 /* LFWdigetEampleModel.m */; };
+		FE547FF1293EEB8600175E72 /* LFCapsuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE547FEF293EEB8600175E72 /* LFCapsuleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,10 +69,10 @@
 		B614D644A59AB96A206BABF8 /* Pods-LFWidgets_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFWidgets_Tests.debug.xcconfig"; path = "Target Support Files/Pods-LFWidgets_Tests/Pods-LFWidgets_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E0725AD8C4A7B626AF2CBA37 /* Pods_LFWidgets_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LFWidgets_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE1CF15718550367E1BFE39E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		FE547FE6293EEA8E00175E72 /* LFCapsuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LFCapsuleViewController.h; path = ../../../../LFWidgets/Example/LFWidgets/LFCapsuleViewController.h; sourceTree = "<group>"; };
-		FE547FE7293EEA8E00175E72 /* LFCapsuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LFCapsuleViewController.m; path = ../../../../LFWidgets/Example/LFWidgets/LFCapsuleViewController.m; sourceTree = "<group>"; };
-		FE547FE8293EEA8E00175E72 /* LFWdigetEampleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LFWdigetEampleModel.m; path = ../../../../LFWidgets/Example/LFWidgets/LFWdigetEampleModel.m; sourceTree = "<group>"; };
-		FE547FE9293EEA8E00175E72 /* LFWdigetEampleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LFWdigetEampleModel.h; path = ../../../../LFWidgets/Example/LFWidgets/LFWdigetEampleModel.h; sourceTree = "<group>"; };
+		FE547FEC293EEB8600175E72 /* LFWdigetEampleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFWdigetEampleModel.m; sourceTree = "<group>"; };
+		FE547FED293EEB8600175E72 /* LFCapsuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFCapsuleViewController.h; sourceTree = "<group>"; };
+		FE547FEE293EEB8600175E72 /* LFWdigetEampleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFWdigetEampleModel.h; sourceTree = "<group>"; };
+		FE547FEF293EEB8600175E72 /* LFCapsuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFCapsuleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,10 +143,10 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* LFViewController.h */,
 				6003F5A6195388D20070C39A /* LFViewController.m */,
-				FE547FE6293EEA8E00175E72 /* LFCapsuleViewController.h */,
-				FE547FE7293EEA8E00175E72 /* LFCapsuleViewController.m */,
-				FE547FE9293EEA8E00175E72 /* LFWdigetEampleModel.h */,
-				FE547FE8293EEA8E00175E72 /* LFWdigetEampleModel.m */,
+				FE547FED293EEB8600175E72 /* LFCapsuleViewController.h */,
+				FE547FEF293EEB8600175E72 /* LFCapsuleViewController.m */,
+				FE547FEE293EEB8600175E72 /* LFWdigetEampleModel.h */,
+				FE547FEC293EEB8600175E72 /* LFWdigetEampleModel.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -376,9 +376,9 @@
 			files = (
 				6003F59E195388D20070C39A /* LFAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* LFViewController.m in Sources */,
-				FE547FEB293EEA8E00175E72 /* LFWdigetEampleModel.m in Sources */,
-				FE547FEA293EEA8E00175E72 /* LFCapsuleViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				FE547FF1293EEB8600175E72 /* LFCapsuleViewController.m in Sources */,
+				FE547FF0293EEB8600175E72 /* LFWdigetEampleModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
