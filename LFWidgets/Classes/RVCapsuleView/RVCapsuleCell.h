@@ -6,10 +6,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RVCapsuleCellModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RVCapsuleCell : UIView
+
+- (void)bindCellModel:(RVCapsuleCellModel *)cellModel;
 
 @end
 
