@@ -1,24 +1,24 @@
 //
-//  RVCapsuleView.m
+//  LFCapsuleView.m
 //  LFWidgets
 //
 //  Created by ravendeng on 2022/12/5.
 //
 
-#import "RVCapsuleView.h"
-#import "RVCapsuleCell.h"
+#import "LFCapsuleView.h"
+#import "LFCapsuleCell.h"
 
 static NSString *const kRVCapsuleViewReuseIdentifier = @"kRVCapsuleViewReuseIdentifier";
 static NSInteger const kRVCapsuleViewCellTag = 1024;
 
-@interface RVCapsuleView () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface LFCapsuleView () <UICollectionViewDataSource, UICollectionViewDelegate>
 
-@property (nonatomic, strong) RVCapsuleViewModel *viewModel;
+@property (nonatomic, strong) LFCapsuleViewModel *viewModel;
 @property (nonatomic, strong) UICollectionView *collectionView;
 
 @end
 
-@implementation RVCapsuleView
+@implementation LFCapsuleView
 
 #pragma mark - Private
 
@@ -45,7 +45,7 @@ static NSInteger const kRVCapsuleViewCellTag = 1024;
     return self;
 }
 
-- (void)bindViewModel:(RVCapsuleViewModel *)viewModel {
+- (void)bindViewModel:(LFCapsuleViewModel *)viewModel {
     self.viewModel = viewModel;
 }
 
@@ -58,12 +58,12 @@ static NSInteger const kRVCapsuleViewCellTag = 1024;
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:kRVCapsuleViewReuseIdentifier forIndexPath:indexPath];
-    RVCapsuleCell *cellView = [cell.contentView viewWithTag:kRVCapsuleViewCellTag];
+    LFCapsuleCell *cellView = [cell.contentView viewWithTag:kRVCapsuleViewCellTag];
     if (!cellView) {
-        cellView = [[RVCapsuleCell alloc] initWithFrame:cell.contentView.bounds];
+        cellView = [[LFCapsuleCell alloc] initWithFrame:cell.contentView.bounds];
         [cell.contentView addSubview:cellView];
     }
-    RVCapsuleCellModel *cellModel = self.viewModel.cellModels[indexPath.item];
+    LFCapsuleCellModel *cellModel = self.viewModel.cellModels[indexPath.item];
     [cellView bindCellModel:cellModel];
     return cell;
 }
@@ -79,7 +79,7 @@ static NSInteger const kRVCapsuleViewCellTag = 1024;
 - (CGSize)collectionView:(UICollectionView *)collectionView
                     layout:(UICollectionViewLayout *)collectionViewLayout
     sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    RVCapsuleCellModel *model = self.viewModel.cellModels[indexPath.item];
+    LFCapsuleCellModel *model = self.viewModel.cellModels[indexPath.item];
     CGFloat leftMargin = 0;
     CGFloat rightMargin = 0;
     if (model.leftIconImage) {

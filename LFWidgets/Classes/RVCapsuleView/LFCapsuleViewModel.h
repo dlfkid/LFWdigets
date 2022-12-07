@@ -1,20 +1,20 @@
 //
-//  RVCapsuleViewModel.h
+//  LFCapsuleViewModel.h
 //  LFWidgets
 //
 //  Created by ravendeng on 2022/12/6.
 //
 
 #import <Foundation/Foundation.h>
-#import "RVCapsuleCellModel.h"
+#import "LFCapsuleCellModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RVCapsuleViewModel : NSObject
+@interface LFCapsuleViewModel : NSObject
 
 @property (nonatomic, weak) UIView *CapsuleViewl;
 
-@property (nonatomic, strong) NSArray<RVCapsuleCellModel *> *cellModels;
+@property (nonatomic, strong) NSArray<LFCapsuleCellModel *> *cellModels;
 
 /// 设置每个Cell之间的水平间距
 @property (nonatomic, assign) CGFloat cellHorizonalMargin;

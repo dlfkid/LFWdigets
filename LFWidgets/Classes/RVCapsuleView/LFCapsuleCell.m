@@ -1,23 +1,23 @@
 //
-//  RVCapsuleCell.m
+//  LFCapsuleCell.m
 //  LFWidgets
 //
 //  Created by ravendeng on 2022/12/5.
 //
 
-#import "RVCapsuleCell.h"
+#import "LFCapsuleCell.h"
 
-@interface RVCapsuleCell ()
+@interface LFCapsuleCell ()
 
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UIView *bottomView;
 @property (nonatomic, strong) UIImageView *leftIcon;
 @property (nonatomic, strong) UIImageView *rightIcon;
-@property (nonatomic, strong) RVCapsuleCellModel *cellModel;
+@property (nonatomic, strong) LFCapsuleCellModel *cellModel;
 
 @end
 
-@implementation RVCapsuleCell
+@implementation LFCapsuleCell
 
 #pragma mark - Overide
 
@@ -90,7 +90,7 @@
 
 #pragma mark - Public
 
-- (void)bindCellModel:(RVCapsuleCellModel *)cellModel {
+- (void)bindCellModel:(LFCapsuleCellModel *)cellModel {
     self.cellModel = cellModel;
     if (cellModel.attributeTitle.length > 0) {
         self.titleLabel.attributedText = cellModel.attributeTitle;

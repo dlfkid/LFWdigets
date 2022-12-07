@@ -1,5 +1,5 @@
 //
-//  RVCapsuleCellModel.h
+//  LFCapsuleCellModel.h
 //  LFWidgets
 //
 //  Created by ravendeng on 2022/12/5.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RVCapsuleCellModel : NSObject
+@interface LFCapsuleCellModel : NSObject
 
 /// 所属Cell
 @property (nonatomic, weak) UIView *cell;

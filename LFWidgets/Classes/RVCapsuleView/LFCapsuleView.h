@@ -1,18 +1,18 @@
 //
-//  RVCapsuleCell.h
+//  LFCapsuleView.h
 //  LFWidgets
 //
 //  Created by ravendeng on 2022/12/5.
 //
 
 #import <UIKit/UIKit.h>
-#import "RVCapsuleCellModel.h"
+#import "LFCapsuleViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RVCapsuleCell : UIView
+@interface LFCapsuleView : UIView
 
-- (void)bindCellModel:(RVCapsuleCellModel *)cellModel;
+- (void)bindViewModel:(LFCapsuleViewModel *)viewModel;
 
 @end
 
