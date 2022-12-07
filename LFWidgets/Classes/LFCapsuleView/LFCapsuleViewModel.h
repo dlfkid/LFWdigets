@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LFCapsuleViewModel : NSObject
 
-@property (nonatomic, weak) UIView *CapsuleViewl;
+// @property (nonatomic, weak) LFCapsuleView *capsuleView;
 
 @property (nonatomic, strong) NSArray<LFCapsuleCellModel *> *cellModels;
 

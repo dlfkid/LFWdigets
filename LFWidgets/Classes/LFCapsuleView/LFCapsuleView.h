@@ -7,7 +7,6 @@
 
 #import <UIKit/UIKit.h>
 #import "LFCapsuleViewModel.h"
-
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LFCapsuleView : UIView
