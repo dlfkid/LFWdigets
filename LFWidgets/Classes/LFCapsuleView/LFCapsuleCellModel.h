@@ -6,8 +6,11 @@
 //
 
 #import <Foundation/Foundation.h>
+@class LFCapsuleCellModel;
 
 NS_ASSUME_NONNULL_BEGIN
+
+typedef void (^LFCapsuleGestureHandler)(UIGestureRecognizer *gesture, LFCapsuleCellModel *model);
 
 @interface LFCapsuleCellModel : NSObject
 
@@ -61,6 +64,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 是否使用弹性宽度
 @property (nonatomic, assign) BOOL useFlexibleWidth;
+
+@property (nonatomic, copy) LFCapsuleGestureHandler tapGestrureHandler;
+
+@property (nonatomic, copy) LFCapsuleGestureHandler longPressGestrueHandler;
 
 @end
 

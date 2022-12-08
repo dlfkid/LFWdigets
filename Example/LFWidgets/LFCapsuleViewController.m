@@ -29,7 +29,39 @@
     self.capsuleView = [[LFCapsuleView alloc] initWithFrame:CGRectMake(0, topMargin, screenWidth, capsuleViewHeight)];
     self.capsuleView.backgroundColor = [UIColor yellowColor];
     [self.view addSubview:self.capsuleView];
+
+    self.capsuleViewModel.cellVerticalMargin = 5;
+    self.capsuleViewModel.cellHorizonalMargin = 5;
+
+    NSArray *testData = @[ @"alpha", @"beta", @"gamma", @"epsilon", @"zeta", @"eta", @"theta", @"iota", @"kappa" ];
+
+    NSMutableArray *cellModels = [[NSMutableArray alloc] init];
+
+    for (NSString *text in testData) {
+        LFCapsuleCellModel *cellModel = [self sampleCellModel];
+        cellModel.title = text;
+        [cellModels addObject:cellModel];
+    }
+
+    self.capsuleViewModel.cellModels = cellModels;
+
     [self.capsuleView bindViewModel:self.capsuleViewModel];
+}
+
+- (LFCapsuleCellModel *)sampleCellModel {
+    LFCapsuleCellModel *cellModel = [[LFCapsuleCellModel alloc] init];
+    cellModel.maxWidth = 110;
+    cellModel.cellHeight = 24;
+    cellModel.radius = cellModel.cellHeight / 2;
+    cellModel.backgroundColor = [UIColor lightGrayColor];
+    cellModel.font = [UIFont boldSystemFontOfSize:16];
+    cellModel.longPressGestrueHandler = ^(UIGestureRecognizer *_Nonnull gesture, LFCapsuleCellModel *_Nonnull model) {
+        NSLog(@"long press: %@", model.title);
+    };
+    cellModel.tapGestrureHandler = ^(UIGestureRecognizer *_Nonnull gesture, LFCapsuleCellModel *_Nonnull model) {
+        NSLog(@"tap: %@", model.title);
+    };
+    return cellModel;
 }
 
 - (LFCapsuleViewModel *)capsuleViewModel {

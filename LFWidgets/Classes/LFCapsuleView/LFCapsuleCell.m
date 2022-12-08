@@ -25,6 +25,7 @@
     self = [super init];
     if (self) {
         [self configureBaseUI];
+        [self addGestures];
     }
     return self;
 }
@@ -33,6 +34,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self configureBaseUI];
+        [self addGestures];
     }
     return self;
 }
@@ -41,6 +43,7 @@
     self = [super initWithCoder:coder];
     if (self) {
         [self configureBaseUI];
+        [self addGestures];
     }
     return self;
 }
@@ -51,6 +54,28 @@
 }
 
 #pragma mark - Private
+
+- (void)addGestures {
+    self.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureAction:)];
+    [self addGestureRecognizer:tapGesture];
+
+    UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self
+                                                                                                   action:@selector(longPressGestureAction:)];
+    [self addGestureRecognizer:longPressGesture];
+}
+
+- (void)tapGestureAction:(UITapGestureRecognizer *)sender {
+    if (self.cellModel.tapGestrureHandler) {
+        self.cellModel.tapGestrureHandler(sender, self.cellModel);
+    }
+}
+
+- (void)longPressGestureAction:(UILongPressGestureRecognizer *)sender {
+    if (self.cellModel.longPressGestrueHandler) {
+        self.cellModel.longPressGestrueHandler(sender, self.cellModel);
+    }
+}
 
 - (void)configureBaseUI {
     _bottomView = [[UIView alloc] initWithFrame:CGRectZero];

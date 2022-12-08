@@ -41,12 +41,14 @@ static NSInteger const kRVCapsuleViewCellTag = 1024;
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
+        [self configCollectionView];
     }
     return self;
 }
 
 - (void)bindViewModel:(LFCapsuleViewModel *)viewModel {
     self.viewModel = viewModel;
+    [self.collectionView reloadData];
 }
 
 #pragma mark - UIColectionViewDataSource
@@ -88,7 +90,8 @@ static NSInteger const kRVCapsuleViewCellTag = 1024;
     if (model.rightIconImage) {
         rightMargin = model.rightIconMargin + model.rightIconSize.width;
     }
-    return CGSizeMake(model.titleWidth + model.radius * 2 + leftMargin + rightMargin, model.cellHeight);
+    CGSize itemSize = CGSizeMake(model.titleWidth + model.radius * 2 + leftMargin + rightMargin, model.cellHeight);
+    return itemSize;
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView
